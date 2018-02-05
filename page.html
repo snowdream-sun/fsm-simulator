@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>An FSM Simulator</title>
+</head>
+<body>
+    <h1>A Finite State Machine Simulator</h1>
+    <img src="fsmExample.jpg" alt="FSM Example" style="float:right;">
+    <p style="float:right;"><small>
+        D. M. Harris and S. L. Harris, <i>Digital Design and Computer Architecture</i>, 2nd ed. Waltham, MA: Elsevier, 2013, pp. 125-127.
+    </small></p>
+    <p>
+        An FSM as illustrated in the diagram on the right has been hard-coded.<br><br>
+        <button onclick="createFSM()">Create FSM</button>
+    </p>
+    <p id="info"></p>
+    <p id="simuPanel" style="display:none">
+        To simulate the behaviour of your FSM, choose an input and click <b>Clock Edge</b> to enter the next clock cycle.<br><br>
+        <button onclick="enterInput('00')">00</button><button onclick="enterInput('01')">01</button><button onclick="enterInput('10')">10</button><button onclick="enterInput('11')">11</button>
+        <button onclick="atClockEdge()">Clock Edge</button>
+        <button onclick="asyncReset()">Asynchronous Reset</button>
+        <p id="curIn"></p>
+        <p id="curOut"></p>
+        <p id="curState"></p>
+        <p id="nextState"></p>
+    </p>
+    <script src="userInput.js"></script>
+    <script src="backEnd.js"></script>
+</body>
+</html>
