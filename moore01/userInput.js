@@ -1,5 +1,7 @@
 "use strict";
 
+// Moore #01
+
 // Global Variable
 var userInput = {};
 
