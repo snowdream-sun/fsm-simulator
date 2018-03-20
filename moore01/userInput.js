@@ -46,17 +46,6 @@ userInput.outputT = [
     [  "S3",   "1001" ]
 ];
 
-/*
-// data type: 2D string array
-userInput.outputT = [
-//  [curState, inputs, outputs] for mealy machine
-    [  "S0,     "XX",  "0010" ],
-    [  "S1,     "XX",  "0110" ],
-    [  "S2,     "XX",  "1000" ],
-    [  "S3,     "XX",  "1001" ]
-];
-*/
-
 /*** Section IV - Simulation ***/
 
 // TBD
