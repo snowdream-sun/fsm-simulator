@@ -42,6 +42,10 @@ table {
     margin: auto;
 }
 
+table.specs th{
+    text-align: right;
+}
+
 th {
     background-color: #0075BE;
     color: white;
@@ -66,4 +70,8 @@ img {
 button {
     padding: 8px;
     cursor: pointer;
+}
+
+pre {
+    tab-size: 4;
 }
