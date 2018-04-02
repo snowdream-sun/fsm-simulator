@@ -24,10 +24,15 @@ function asyncReset() {
     updatePanel();
 }
 
+function displayVerilog() {
+    document.getElementById("hdl").innerHTML = writeVerilog();
+}
+
 // Events
 document.getElementById("curIn").onchange = changeInput;
 document.getElementById("clkEdge").onclick = activeClkEdge;
 document.getElementById("reset").onclick = asyncReset;
+document.getElementById("verilog").onclick = displayVerilog;
 
 // Running
 createFSM();
