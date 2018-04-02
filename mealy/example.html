@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FSM Mealy</title>
+    <title>Example: Mealy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../example.css">
@@ -21,11 +21,13 @@
                 <tr><th>Machine Type</th><td class="rightmost">Mealy</td></tr>
             </table>
             <p><i>Note: All inputs and outputs are 1-bit signals.</i></p>
-            <h2>State Transition Diagram</h2>
-            <img src="STD.jpg" alt="Mealy State Transition Diagram">
-            <h2>State Transition and Output Table</h2>
-            <img src="STOT.jpg" alt="Mealy State Transition and Output Table">
-            <p>D. M. Harris and S. L. Harris, <i>Digital Design and Computer Architecture</i>, 2nd ed. Waltham, MA: Elsevier, 2013, pp. 133-134.</p>
+            <div>
+                <h2>State Transition Diagram</h2>
+                <img src="state_transition_diagram.jpg" alt="Mealy State Transition Diagram">
+                <h2>State Transition and Output Table</h2>
+                <img src="state_transition_output_table.jpg" alt="Mealy State Transition and Output Table">
+                <p>D. M. Harris and S. L. Harris, <i>Digital Design and Computer Architecture</i>, 2nd ed. Waltham, MA: Elsevier, 2013, pp. 133-134.</p>
+            </div>
         </div>
         <div class="column">
         <!-- This section is interactive. -->
@@ -57,12 +59,12 @@
             <button id="clkEdge">Clock Edge</button>
             <button id="reset">Asynchronous Reset</button>
             <h2>HDL Generator</h2>
-            <button>Verilog</button>
-            <button>VHDL</button>
+            <button id="verilog">Verilog</button>
+            <pre><code id="hdl"></code></pre>
         </div>
     </div>
-    <script src="userInput.js"></script>
-    <script src="../backEnd.js"></script>
-    <script src="../runExample.js"></script>
+    <script src="user_input.js"></script>
+    <script src="../backend.js"></script>
+    <script src="../run_example.js"></script>
 </body>
 </html>
