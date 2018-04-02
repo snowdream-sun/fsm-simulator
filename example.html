@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example: Moore #2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../example.css">
+</head>
+<body>
+    <div class="all">
+        <h1>A Finite State Machine Simulator</h1>
+        <h3>Example: Moore #2</h3>
+        <div class="column">
+        <!-- This section is hard-coded. -->
+            <h2>Basic Specs</h2>
+            <table>
+                <tr><th>Inputs [1]</th><td class="rightmost">A</td></tr>
+                <tr><th>Outputs [1]</th><td class="rightmost">Y</td></tr>
+                <tr><th>States [3]</th><td class="rightmost">S0, S1, S2</td></tr>
+                <tr><th>Reset State</th><td class="rightmost">S0</td></tr>
+                <tr><th>Machine Type</th><td class="rightmost">Moore</td></tr>
+            </table>
+            <p><i>Note: All inputs and outputs are 1-bit signals.</i></p>
+            <div>
+                <h2>State Transition Diagram</h2>
+                <img src="state_transition_diagram.jpg" alt="Moore #2 State Transition Diagram">
+                <h2>State Transition Table</h2>
+                <img src="state_transition_table.jpg" alt="Moore #2 State Transition Table">
+                <h2>Output Table</h2>
+                <img src="output_table.jpg" alt="Moore #2 Output Table">
+                <p>D. M. Harris and S. L. Harris, <i>Digital Design and Computer Architecture</i>, 2nd ed. Waltham, MA: Elsevier, 2013, pp. 133.</p>
+            </div>
+        </div>
+        <div class="column">
+        <!-- This section is interactive. -->
+            <h2>Simulation Panel</h2>
+            <p>
+                Select an input and click <strong>Clock Edge</strong> to advance to the next state on active clock edge.<br>
+                <br><i>Note: All inputs and outputs are 1-bit signals.</i>
+            </p>
+            <table class="panel">
+                <tr>
+                    <th>Current State</th>
+                    <th>Current Inputs<br>A</th>
+                    <th>Current Outputs<br>Y</th>
+                    <th class="rightmost">Next State</th>
+                </tr>
+                <tr>
+                    <td id="curState"></td>
+                    <td>
+                        <select id="curIn">
+                            <option value="undefined" selected disabled>Select</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                        </select>
+                    </td>
+                    <td id="curOut"></td>
+                    <td id="nextState" class="rightmost"></td>
+                </tr>
+            </table><br>
+            <button id="clkEdge">Clock Edge</button>
+            <button id="reset">Asynchronous Reset</button>
+            <h2>HDL Generator</h2>
+            <button id="verilog">Verilog</button>
+            <pre><code id="hdl"></code></pre>
+        </div>
+    </div>
+    <script src="user_input.js"></script>
+    <script src="../backend.js"></script>
+    <script src="../run_example.js"></script>
+</body>
+</html>
