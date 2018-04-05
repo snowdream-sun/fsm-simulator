@@ -1,7 +1,2 @@
-button {
-    background-color: whitesmoke;
-}
-
-button:hover {
-    background-color: silver;
-}
+button {background-color: whitesmoke;}
+button:hover {background-color: silver;}
